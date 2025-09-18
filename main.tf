@@ -27,7 +27,7 @@ locals {
 }
 data "turbonomic_aws_instance" "txc2025" {
   entity_name = var.repo_name
-  default_size = "t2.nano"
+  default_instance_type = "t2.nano"
 }
 
 
