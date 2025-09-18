@@ -33,7 +33,7 @@ data "turbonomic_aws_instance" "txc2025" {
 
 resource "aws_instance" "lab1-vm1" {
   ami           = data.aws_ami.amazon_linux.id
-  instance_type = instance_type = data.turbonomic_aws_instance.txc2025.new_instance_type
+  instance_type = data.turbonomic_aws_instance.txc2025.new_instance_type
   
   tags          = merge(local.common_tags, local.lifecycle_tags)
 
